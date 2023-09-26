@@ -5,11 +5,11 @@ import { useLoaderData } from 'react-router-dom';
 import { PieChart, Pie, Cell, Legend, Tooltip } from 'recharts';
 const Statistics = () => {
  
-  const [tadded,setTadded] =useState(0)
+   const [tadded,setTadded] =useState()
   useEffect(()=>{
     const i = JSON.parse(localStorage.getItem("price"));
     const your_doned = i.length; 
-  setTadded(your_doned)
+   setTadded(your_doned)
   },[])
     const loader = useLoaderData();
     const total = loader.length;
@@ -19,7 +19,7 @@ const Statistics = () => {
   ];
 
   const COLORS = ['#0088FE', '#00C49F'];
-  const RADIAN = (tadded/total)-100;
+  const RADIAN = (tadded/total);
 const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
   const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
   const x = cx + radius * Math.cos(-midAngle * RADIAN);
