@@ -50,15 +50,13 @@ else{
     return (
         <div className="container mx-auto">
            <div style={{ backgroundColor:card_bg }} className="card  bg-base-100 shadow-xl">
-  <figure><img className="w-full"  src={Picture} />
+  <figure><img className="w-full relative"  src={Picture} />
   
   </figure>
-  <div className=" bg-stone-800 h-20 opacity-2">
+  <div className=" bg-stone-800 h-20 w-full opacity-80 absolute bottom-[284px]">
   <button onClick={handelLocalStorages} style={{backgroundColor:button_background} } className="w-32 text-white p-1 rounded-lg mt-6 ml-6" >Donate {Price}
 </button>
   </div>
- 
-
 <div className="card-body">
 
 <button style={{ backgroundColor:category_bg ,color:button_background}}  className="w-20 ">{Category}</button>
