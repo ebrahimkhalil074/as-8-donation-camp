@@ -3,8 +3,6 @@ import { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 
 import { PieChart, Pie, Cell, Legend, Tooltip } from 'recharts';
-
-
 const Statistics = () => {
  
   const [tadded,setTadded] =useState(0)
@@ -13,11 +11,8 @@ const Statistics = () => {
     const your_doned = i.length; 
   setTadded(your_doned)
   },[])
-
     const loader = useLoaderData();
     const total = loader.length;
-    
-
   const data = [
     { name: 'Your Doned', value:tadded},
     { name: 'Total Doned', value: total},
