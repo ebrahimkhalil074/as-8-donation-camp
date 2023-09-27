@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import {  useLoaderData, useParams } from "react-router-dom";
 import swal from 'sweetalert';
+
  
  const DonationDetails = () => {
     const [donet,setDonet] =useState()
     // const [noFound,setNoFound] =useState()
 const donations =useLoaderData()
 const {id} = useParams()
+
 
 useEffect(()=>{
  const findDonet =donations?.find(donar => donar.id ==id)

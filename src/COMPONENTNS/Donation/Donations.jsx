@@ -11,10 +11,11 @@ fetch("data.json")
 .then(data =>setDonation(data))
 
 },[])
+ 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 container mx-auto">
           {
-            donation.map((donar,i)=><Donar key={i} donar={donar}></Donar>,[])
+            donation.map((donar,i)=><Donar key={i}  donar={donar}></Donar>)
           }
         </div>
     );

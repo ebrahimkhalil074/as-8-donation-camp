@@ -12,7 +12,7 @@ const Donar = ({donar}) => {
 <div className="card-body">
 
 <button style={{ backgroundColor:category_bg ,color:button_background}}  className="w-20 ">{Category}</button>
-    <p style={{color:button_background} } className="text-3xl font-semibold"> {Title}</p>
+    <p style={{color:button_background} } className="text-2xl font-semibold"> {Title}</p>
 </div>
 
 
